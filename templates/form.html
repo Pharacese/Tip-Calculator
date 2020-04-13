@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+</head>
+<body>
+
+    <ul>
+
+        {%for i in range(team_member_count) %}
+        <li>
+
+            <form action="{{ url_for('results') }}" method="post">
+                <input type="text" name="name[]" placeholder="name">
+                <input type="number" name="number_of_hours[]" placeholder="# hours worked" step=".01">
+                
+        </li>
+
+        {% endfor %}
+    
+    </ul>
+    <button <a href="results.html" >Submit</button>
+
+    </form>
+
+
+
+
+    
+</body>
+</html>

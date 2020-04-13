@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- I want to have a table with the names, amount of tips recieved
+    an the amount of hours worked, maybe percentage of pool recieved as well-->
+
+
+
+    <!--
+        
+        Name  Cash   Hours
+        -----+------+-----
+             |      |
+        -----|------|-----
+             |      |
+        -----|------|------
+             |      |
+        -----|------|------
+             |      |
+        -----|------|------
+             |      |
+        -----|------|------
+        
+        --->
+    
+
+    <div class="wrapper">
+        <div class="left">
+            <ul>
+                {%for name in team_member_name %}
+                <li>{{name}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    
+        <div class="right">
+            <ul>
+                {% for hour in hours_worked %}
+                <li>{{hour}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

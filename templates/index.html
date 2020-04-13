@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip pool calculator</title>
+</head>
+<body>
+    <!-- On load asks how many front of house employess worked
+        Should dissappear once filled out-->
+
+        <p>How many front of house team members worked today?</p>
+        <form action="{{ url_for('form_fill') }}" method="post">
+            <input type="number" name="number_of_employees" placeholder="#of team members">
+            <button <a href="form.html"> Submit </button>
+        </form>
+
+
+
+    
+</body>
+</html>
