@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
 </head>
+
 <body>
+                <!-- 
+                Gives input for the hours each employee worked based on the 
+                info provided on page index.html
+             -->
 
-    <ul>
+    <form action="{{ url_for('results') }}" method="POST">
+        <ol>
+            {%for i in range(emp_count) %}
+            <li>
 
-        {%for i in range(team_member_count) %}
-        <li>
+                <input type="number" name="number_of_hours" placeholder="# hours worked" step=".01">
 
-            <form action="{{ url_for('results') }}" method="post">
-                <input type="text" name="name[]" placeholder="name">
-                <input type="number" name="number_of_hours[]" placeholder="# hours worked" step=".01">
-                
-        </li>
+            </li>
+            {% endfor %}
 
-        {% endfor %}
-    
-    </ul>
-    <button <a href="results.html" >Submit</button>
+            
 
+        </ol>
+        <input type="number" name="tip_pool" placeholder="Tip pool" step=".01">
+        <button <a href="results.html">Submit</button>
     </form>
 
 
 
+    
+        
 
     
+
+
+
+
+
 </body>
+
 </html>

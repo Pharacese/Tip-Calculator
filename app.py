@@ -17,15 +17,19 @@ def home():
 
 @app.route("/form", methods=["POST"])
 def form_fill():
-    team_member_count = int(request.form.get("number_of_employees"))
-    return render_template('form.html', team_member_count=team_member_count)
+    
+    emp_count = int(request.form.get("number_of_employees"))
+    return render_template('form.html', emp_count= emp_count)
     
 
 @app.route("/results", methods=["POST"])
 def results():
-    team_member_name = request.form.getlist("name[]")
-    hours_worked = request.form.getlist("number_of_hours[]")
-    return render_template("results.html", team_member_name = team_member_name, hours_worked = hours_worked)
+    tips_to_split = request.form.get("tip_pool")
+    hours_worked = request.form.getlist("number_of_hours")
+    print(hours_worked)
+
+
+    return render_template("results.html",tips_to_split = tips_to_split, hours_worked = hours_worked )
 
 
 
