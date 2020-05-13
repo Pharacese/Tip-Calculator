@@ -35,14 +35,18 @@
             <th>Tips to be received</th>
             <th>Hours worked</th>
         </tr>
-        {% for hours in hours_worked %}
+        {% for hours,tips in hours_tips %}
         <tr>
           <td>{{loop.index}}</td>
-          <td>Fill</td>
+          <td>{{tips}}</td>
           <td>{{hours}}</td>
         </tr>
         {% endfor %}
     </table>
+
+    <p>Total hours worked between all team members :{{hour_total}}</p>
+    <p>{{tip_division}}</p>
+    <p>{{ind_tips}}</p>
 
     <!-- <div class="wrapper">
         <div class="left">
